@@ -1,0 +1,74 @@
+{% extends "cuttingpattern/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <script>        
+        document.addEventListener("DOMContentLoaded", function() {
+            getCuttingPattern({{pattern.id}});
+        });
+    </script>
+    <div id="pattern-id" hidden>{{pattern.id}}</div>
+        <div class="flex" style="height: 100%; margin: 0;">
+            <!-- #region sidenav-->
+            <nav class="main-menu">
+                <ul>
+                    <li id="show_cuttingdisplay" class="has-subnav">
+                        <a>
+                            <i class="fa fa-bar-chart-o fa-2x"></i>
+                            <span class="nav-text">
+                                Breackpicture
+                            </span>
+                        </a>                        
+                    </li>
+                    <li id="show_cuttingcode">
+                        <a>
+                            <i class="fa fa-file fa-2x"></i>                            
+                            <span class="nav-text">
+                                Cuttingcode
+                            </span>
+                        </a>
+                    
+                    </li>
+                    <li id="show-header" class="has-subnav">
+                        <a>
+                            <i class="fa fa-align-left fa-2x"></i>
+                            <span class="nav-text">
+                                Header Information
+                            </span>
+                        </a>                        
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- #endregion -->
+        <!-- #region Cuttingpattern Display-->
+        <div id="breakpic" class="flex">
+            <div class="fex cp-display">
+                <div id="Parent" name="Parent" style="height:800px; width:1200px;"></div>
+            </div>
+            <!-- #endregion -->
+
+            <!-- #region Cuttingpattern Info-->
+            <div class="flex flex-col cp-info-display">
+                <h2 class="center-info">Information</h2>
+                <div id="info" class="flex center-info"></div>
+                <div id="sheet-info" class="flex flex-col info-display" hidden></div>
+            </div>
+        </div>
+        <!-- #endregion -->
+
+        <div id="cuttingcode" class="flex" style="width: 100%; margin: 16px;" hidden>
+            <div class="cp-value-container">
+                <textarea id="cuttingcode-value" class="cp-value" readonly></textarea>
+            </div>
+        </div>
+
+        <div id="header-information" class="flex" style="width: 100%; margin: 16px;" hidden>
+            <div id="header-information-content" class="cp-header-information">
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

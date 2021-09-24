@@ -1,0 +1,26 @@
+{% extends "cuttingpattern/layout.html" %}
+{% load static %}
+
+{% block body %}
+<!-- #region list of cuttingplans-->
+<ul id="cp-display" class="rows">
+  {% for pattern in cuttingpatterns %}
+      <li id="{{pattern.id}}" class="flex row-indication">
+        <div class="flex left-1-3 listing"><a>{{pattern.file_name}}</a></div>
+        <div class="flex listing" style="width: 100%;">
+          <a>{{pattern.description}}</a>
+          <a>{{pattern.customer.group}} - {{pattern.customer}}</a>
+          <div class="flex-row-reverse" style="width: 100%;">
+            <div class="flex">
+              <a>{{pattern.created}}</a>
+              {% if pattern.user == user%}
+                <img id="delete-ico" style="padding: 0 6px 0 6px;" src="{% static 'delete-button.svg' %}" alt="delete">
+              {% endif %}
+            </div>            
+          </div>
+        </div>
+      </li>
+  {% endfor %}
+</ul>
+<!-- #endregion -->
+{% endblock %}

@@ -1,0 +1,98 @@
+[FLC201009***1"1210830780"0001026062.03210.00000.00000.00000.00000.002.1020.00000.00000.00000.0020100145 20.00100020100145 0020100145 0000          
+X1011.0 Y90.0 T99 B99
+Y1367.0 T1 B0
+Y1367.0 T2 B0
+X1010.0 Y90.0 T99 B99
+Y1367.0 T3 B0
+Y1367.0 T4 B0
+X1010.0 Y90.0 T99 B99
+Y1367.0 T5 B0
+Y1367.0 T6 B0
+X1010.0 Y403.0 T99 B99
+Y1367.0 T7 B0
+Y1367.0 T8 B0
+X1010.0 Y90.0 T99 B99
+Y1367.0 T9 B0
+Y1367.0 T10 B0
+X1011.0 Y90.0 T99 B99
+Y1367.0 T11 B0
+Y1367.0 T12 B0
+T1
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55554
+)
+T2
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55555
+)
+T3
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55556
+)
+T4
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55557
+)
+T5
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55558
+)
+T6
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55559
+)
+T7
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55560
+)
+T8
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55561
+)
+T9
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55562
+)
+T10
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55563
+)
+T11
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55564
+)
+T12
+(
+IStandingEdge=0
+IQuality=0
+ISheetId=55565
+)
+T99
+(
+IStandingEdge=0
+IQuality=1
+ISheetId=99
+)
+]

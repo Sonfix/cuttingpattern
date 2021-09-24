@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}EDI-Watch{% endblock %}</title>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="{% static 'breakpic.css' %}" rel="stylesheet">
+        <link href="{% static 'style.css' %}" rel="stylesheet">
+        <script src="{% static 'breakpic.js' %}" defer></script>
+        <script src="{% static 'main.js' %}" defer></script>
+        <script src="{% static 'jquery.min.js' %}" defer></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{% url 'index' %}">EDI-Watch</a>
+          
+            <div>
+              <ul class="navbar-nav mr-auto">
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>{{ user.username }}</strong></a>
+                    </li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'explore' %}">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="add-cp" class="nav-link o-link">Add Cuttingpattern</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                {% endif %}
+              </ul>
+            </div>
+          </nav>
+        
+        <div class="body">
+            {% block body %}
+            {% endblock %}
+        </div>
+                
+        <!-- #region Add Plan-->
+        <div id="form-background" class="blocker" hidden>
+            <div class="form-wrapper flex flex-col">
+            <h2>Cuttingplan</h2>
+            <form id="new-cp" class="flex flex-col new-cp">
+                <label for="file_name">Filename: </label> 
+                <input type="text" name="file_name" id="file_name">
+                <label for="description">Description: </label> 
+                <input type="text" name="description" id="description">
+                <div ckass="flex">
+                    <label for="customer">Customer: </label> 
+                    <div style="width: 100%;">
+                        <select name="customer" id="select-customer" style="width: 80%;">
+
+                        </select>
+                        <img class="add-icon" id="add-customer" src="{% static 'add-button.svg' %}" alt="add">
+
+                        <div id="customer-text" style="width: 100%;" hidden>
+                            <input type="text" name="customer" id="text-customer" style="width: 80%;">
+                            <img class="hide-icon" id="hide-customer" src="{% static 'hide-button.svg' %}" alt="delete">
+                            
+                            <div id="customer-group" style="width: 100%;">
+                                <label id="label-text-customer-group" for="text-customer-group">Customer Group: </label> 
+                                <select name="customer" id="select-customer-group" style="width: 80%;">
+
+                                </select>
+                                
+                                <img class="add-icon" id="add-customer-group" src="{% static 'add-button.svg' %}" alt="add">
+                                <input type="text" name="text-customer-group" id="text-customer-group" style="width: 80%;" hidden>
+                                <img class="hide-icon" id="hide-customer-group" src="{% static 'hide-button.svg' %}" alt="delete" hidden>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <label for="machine_code">Cuttingplan: </label> 
+                <input type="file" name="machine_code" id="machine_code">
+                <div class="flex center">
+                <input id="cp-submit" type="submit" class="btn btn-primary"/>
+                </div>
+            </form>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </body>
+</html>

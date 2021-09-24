@@ -1,0 +1,47 @@
+HEGLACUT050
+<Layout>
+ <Header>
+  <ArticleNr>12345</ArticleNr>
+  <Description>        :VSG 8  p  1</Description>
+  <Count>1</Count>
+  <Width>6000</Width>
+  <Height>3210</Height>
+  <TrimLeft>0</TrimLeft>
+  <TrimRight>0</TrimRight>
+  <TrimBottom>0</TrimBottom>
+  <TrimTop>0</TrimTop>
+  <Thickness>8</Thickness>
+  <MinimumBreakoutDistance>20</MinimumBreakoutDistance>
+  <MinimumCutSize>0</MinimumCutSize>
+  <CuttingPressure>7</CuttingPressure>
+  <CuttingSpeed>100</CuttingSpeed>
+  <CuttingWheelInformation>145 </CuttingWheelInformation>
+  <PreassignmentOfBreakoutTrims>20</PreassignmentOfBreakoutTrims>
+  <EdgeDeletionIdentifier>0</EdgeDeletionIdentifier>
+  <GrindingPressure>7</GrindingPressure>
+  <GrindingSpeed>100</GrindingSpeed>
+  <GrindingWheelInformation>145 </GrindingWheelInformation>
+  <SuctionDeviceActive>0</SuctionDeviceActive>
+  <AuxiliaryCutterCuttingPressure>7</AuxiliaryCutterCuttingPressure>
+  <AuxiliaryCutterCuttingSpeed>100</AuxiliaryCutterCuttingSpeed>
+  <AuxiliaryCutterInformation>145 </AuxiliaryCutterInformation>
+  <Source>
+   <Stock>1</Stock>
+   <StockLocation>1</StockLocation>
+   <Remaster>0</Remaster>
+   <RemasterSlot>0</RemasterSlot>
+  </Source>
+  <Target>
+   <Stock>0</Stock>
+   <StockLocation>0</StockLocation>
+   <Remaster>0</Remaster>
+   <RemasterSlot>0</RemasterSlot>
+  </Target>
+  <UserData>
+   <GlassType>1</GlassType>
+  </UserData>
+ </Header>
+ <CuttingCode>
+  <Value>X296 Y3210 T1 B0&#x0A;X876 Y1938 T2 B0&#x0A;X876 Y1938 T3 B0&#x0A;X876 Y1938 T4 B0&#x0A;X876 Y1938 T5 B0&#x0A;X1100 Y900 T6 B0&#x0A;Y900 T7 B0&#x0A;Y900 T8 B0&#x0A;X1100 Y900 T9 B0&#x0A;Y900 T10 B0&#x0A;Y900 T11 B0&#x0A;T1&#x0A;(&#x0A;)&#x0A;T2&#x0A;(&#x0A;)&#x0A;T3&#x0A;(&#x0A;)&#x0A;T4&#x0A;(&#x0A;)&#x0A;T5&#x0A;(&#x0A;)&#x0A;T6&#x0A;(&#x0A;)&#x0A;T7&#x0A;(&#x0A;)&#x0A;T8&#x0A;(&#x0A;)&#x0A;T9&#x0A;(&#x0A;)&#x0A;T10&#x0A;(&#x0A;)&#x0A;T11&#x0A;(&#x0A;)</Value>
+ </CuttingCode>
+</Layout>

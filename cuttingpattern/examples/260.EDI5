@@ -1,0 +1,29 @@
+HEGLACUT050
+<Layout>
+ <Header>
+  <ArticleNr>02450</ArticleNr>
+  <LayoutId>0001</LayoutId>
+  <Description>27471005001:44.2 PXN</Description>
+  <Count>1</Count>
+  <Width>6000</Width>
+  <Height>3210</Height>
+  <TrimLeft>0</TrimLeft>
+  <TrimRight>0</TrimRight>
+  <TrimBottom>0</TrimBottom>
+  <TrimTop>0</TrimTop>
+  <Thickness>8.8</Thickness>
+  <MinimumBreakoutDistance>20</MinimumBreakoutDistance>
+  <MinimumCutSize>160</MinimumCutSize>
+  <PreassignmentOfBreakoutTrims>20</PreassignmentOfBreakoutTrims>
+  <Source>
+   <StockLocation>1</StockLocation>
+  </Source>
+  <UserData>
+   <GlassType>1</GlassType>
+   <OptiId>27471005001</OptiId>
+  </UserData>
+ </Header>
+ <CuttingCode>
+  <Value>X1736 Y1355 T1 B227&#x0A;Y731 Z184 T2 B99&#x0A;Z1552 T3 B219&#x0A;Y1010 Z218 T4 B99&#x0A;Z759 T5 B107&#x0A;Z759 T6 B111&#x0A;Y114 T7 B99&#x0A;X932 Y823 T8 B13&#x0A;Y498 T9 B17&#x0A;Y1054 Z30 T10 B99&#x0A;Z902 T11 B15&#x0A;Y759 Z37 T12 B99&#x0A;Z895 T13 B109&#x0A;Y76 T14 B99&#x0A;X2242 Y1284 T15 B235&#x0A;Y1284 T16 B237&#x0A;Y590 Z1340 T17 B99&#x0A;Z902 T18 B11&#x0A;Y52 T19 B99&#x0A;X1090 Y3210 Z1013 V816 T20 B19&#x0A;V833 W902 T21 B9&#x0A;W111 T22 B99&#x0A;V467 W902 T23 B13&#x0A;W111 T24 B99&#x0A;V902 W896 T25 B17&#x0A;W117 T26 B99&#x0A;V192 T27 B99&#x0A;Z77 T28 B99&#x0A;T1&#x0A;(&#x0A;GXT1,227,5582/4203/0227                   &#x0A;IA1,-,1                                  &#x0A;ISheetId=060006980&#x0A;IBreakingOrder=1&#x0A;)&#x0A;T2&#x0A;(&#x0A;)&#x0A;T3&#x0A;(&#x0A;GXT2,219,5582/4203/0219                   &#x0A;IA2,-,1                                  &#x0A;ISheetId=060007602&#x0A;IBreakingOrder=2&#x0A;)&#x0A;T4&#x0A;(&#x0A;)&#x0A;T5&#x0A;(&#x0A;GXT3,107,5582/4602/0107                   &#x0A;IA3,-,1                                  &#x0A;ISheetId=059778023&#x0A;IBreakingOrder=3&#x0A;)&#x0A;T6&#x0A;(&#x0A;GXT4,111,5582/4602/0111                   &#x0A;IA4,-,1                                  &#x0A;ISheetId=059778047&#x0A;IBreakingOrder=4&#x0A;)&#x0A;T7&#x0A;(&#x0A;)&#x0A;T8&#x0A;(&#x0A;GXT5,13,5582/4201/0013                    &#x0A;IA5,+,1                                  &#x0A;ISheetId=059997255&#x0A;IBreakingOrder=5&#x0A;)&#x0A;T9&#x0A;(&#x0A;GXT6,17,5582/4201/0017                    &#x0A;IA6,+,1                                  &#x0A;ISheetId=059997251&#x0A;IBreakingOrder=6&#x0A;)&#x0A;T10&#x0A;(&#x0A;)&#x0A;T11&#x0A;(&#x0A;GXT7,15,5583/3401/0015                    &#x0A;IA7,-,1                                  &#x0A;ISheetId=059839650&#x0A;IBreakingOrder=7&#x0A;)&#x0A;T12&#x0A;(&#x0A;)&#x0A;T13&#x0A;(&#x0A;GXT8,109,5582/4602/0109                   &#x0A;IA8,-,1                                  &#x0A;ISheetId=059778011&#x0A;IBreakingOrder=8&#x0A;)&#x0A;T14&#x0A;(&#x0A;)&#x0A;T15&#x0A;(&#x0A;GXT9,235,5582/4203/0235                   &#x0A;IA9,+,1                                  &#x0A;ISheetId=060007028&#x0A;IBreakingOrder=9&#x0A;)&#x0A;T16&#x0A;(&#x0A;GXT10,237,5582/4203/0235                  &#x0A;IA10, ,1                                 &#x0A;ISheetId=060007029&#x0A;IBreakingOrder=10&#x0A;)&#x0A;T17&#x0A;(&#x0A;)&#x0A;T18&#x0A;(&#x0A;GXT11,11,5583/3401/0011                   &#x0A;IA11,-,0                                 &#x0A;ISheetId=059839470&#x0A;IBreakingOrder=11&#x0A;)&#x0A;T19&#x0A;(&#x0A;)&#x0A;T20&#x0A;(&#x0A;GXT12,19,5583/3401/0019                   &#x0A;IA12,-,1                                 &#x0A;ISheetId=059839690&#x0A;IBreakingOrder=12&#x0A;)&#x0A;T21&#x0A;(&#x0A;GXT13,9,5583/3401/0009                    &#x0A;IA13,-,0                                 &#x0A;ISheetId=059839458&#x0A;IBreakingOrder=13&#x0A;)&#x0A;T22&#x0A;(&#x0A;)&#x0A;T23&#x0A;(&#x0A;GXT14,13,5583/3401/0013                   &#x0A;IA14,-,0                                 &#x0A;ISheetId=059839482&#x0A;IBreakingOrder=14&#x0A;)&#x0A;T24&#x0A;(&#x0A;)&#x0A;T25&#x0A;(&#x0A;GXT15,17,5583/3401/0017                   &#x0A;IA15,-,0                                 &#x0A;ISheetId=059839626&#x0A;IBreakingOrder=15&#x0A;)&#x0A;T26&#x0A;(&#x0A;)&#x0A;T27&#x0A;(&#x0A;)&#x0A;T28&#x0A;(&#x0A;)</Value>
+ </CuttingCode>
+</Layout>

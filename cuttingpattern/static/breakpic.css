@@ -1,0 +1,120 @@
+#parentDivBP{
+    width: 1000px;
+    height: 536px;
+    margin: 0 auto;
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#CuttingPlan{
+    background-color:  lightblue;
+    border:1px solid blue;
+    display: flex;
+}
+
+.R{
+    display:flex;
+    flex-direction: row-reverse;
+}
+
+.L{
+    display:flex;
+    flex-direction: row;
+}
+
+.O{
+    display:flex;
+    flex-direction: column;
+}	
+
+.U{
+    display:flex;
+    flex-direction: column-reverse;
+}
+
+.XTravereL{
+    border-left: 1px solid green;
+}
+.XTravereR{
+    border-right: 1px solid green;
+}
+.YTravereO{
+    border-top: 1px solid yellow;	
+}
+.YTravereU{
+    border-bottom: 1px solid yellow;	
+}
+.ZTravereL{
+    border-left: 1px solid red;
+}
+.ZTravereR{
+    border-right: 1px solid red;
+}		
+.VTravereO{
+    border-top: 1px solid blue;
+}
+.VTravereU{
+    border-bottom: 1px solid blue;
+}
+.WTravereL{
+    border-left: 1px solid purple;
+}
+.WTravereR{
+    border-right: 1px solid purple;
+}
+
+.isSheet{
+    cursor: pointer;
+    background-color: #999999;
+    display:flex;
+    justify-content:space-around;
+    overflow: hidden;
+    flex-flow: column wrap;
+}
+
+.isSheet:active{
+    background-color: #BBBBBB;
+}
+
+.isSheet:hover{
+    background-color: #BBBBBB;
+}
+
+.isCenterTextBP{
+    color: #FEFEFE;
+    text-align: center;
+    margin: auto;
+    align-self: center;
+    width: 100%;
+}
+
+.selected{
+    background-color:#771100;
+}
+
+.selected:hover{
+    background-color:#771122;
+} 
+
+.ModelPath{
+    z-index:1;
+    fill: red;
+    stroke:red;
+    fill-opacity:0.1;
+}
+
+.hide {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
+
+    .isCenterTextBP{
+        display: none;
+    }
+
+}
+

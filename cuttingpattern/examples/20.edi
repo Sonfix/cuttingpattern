@@ -1,0 +1,139 @@
+[FLC201009***1"1210830780"0001026062.03210.00000.00000.00000.00000.002.1020.00000.00000.00000.0020100145 20.00100020100145 0020100145 0000
+X1356 Y476 T1 B3330
+Y476 T2 B3332
+Y1358 Z117 T3 B99
+Z1239 V679 T4 B3344
+V679 T5 B3346
+Y753 Z512 T6 B99
+Z844 T7 B1104
+Y147 T8 B99
+X582 Y712 T9 B1109
+Y429 Z40 T10 B99
+Z542 T11 B1110
+Y1983 Z164 T12 B99
+Z418 T13 B1130
+Y86 T14 B99
+X1195 Y1306 Z1086 T15 B3306
+Z109 T16 B99
+Y1157 Z153 T17 B99
+Z1042 T18 B1143
+Y674 Z181 T19 B99
+Z1014 T20 B3312
+Y73 T21 B99
+T1
+(
+IA1,-,-1                                 
+IBreakingOrder=1
+ISheetId=050166917
+GXT1,3330,1698
+)
+T2
+(
+IA2,-,-1                                 
+IBreakingOrder=2
+ISheetId=050166918
+GXT2,3332,1698
+)
+T3
+(
+I__SheetType__=5
+)
+T4
+(
+IA3,+,-1                                 
+IBreakingOrder=3
+ISheetId=050166945
+GXT3,3344,1698/34/3344
+)
+T5
+(
+IA4, ,-1                                 
+IBreakingOrder=4
+ISheetId=050166946
+GXT4,3346,1698/34/3344
+)
+T6
+(
+I__SheetType__=5
+)
+T7
+(
+IA5,-,-1                                 
+IBreakingOrder=5
+ISheetId=050179988
+GXT5,1104,1731
+)
+T8
+(
+I__SheetType__=5
+)
+T9
+(
+IA6,-,-1                                 
+IBreakingOrder=6
+ISheetId=050169407
+GXT6,1109,1734/12/1109
+)
+T10
+(
+I__SheetType__=5
+)
+T11
+(
+IA7,-,-1                                 
+IBreakingOrder=7
+ISheetId=050180028
+GXT7,1110,1731
+)
+T12
+(
+I__SheetType__=5
+)
+T13
+(
+IA8,-,-1                                 
+IBreakingOrder=8
+ISheetId=050140709
+GXT8,1130,1712
+)
+T14
+(
+I__SheetType__=5
+)
+T15
+(
+IA9,-,-1                                 
+IBreakingOrder=9
+ISheetId=050167041
+GXT9,3306,1698/34/3306
+)
+T16
+(
+I__SheetType__=5
+)
+T17
+(
+I__SheetType__=5
+)
+T18
+(
+IA10,-,-1                                
+IBreakingOrder=10
+ISheetId=050169863
+GXT10,1143,1734/12/1143
+)
+T19
+(
+I__SheetType__=5
+)
+T20
+(
+IA11,-,-1                                
+IBreakingOrder=11
+ISheetId=050167057
+GXT11,3312,1698/34/3312
+)
+T21
+(
+I__SheetType__=5
+)]
