@@ -53,6 +53,7 @@ Clicking on "send" will add the cutting pattern to the system. If everything suc
 ## Specifications
 
   The following function are supported by this apllication:
+  - Register and/or logging in
   - Seeing all created cuttingplans
 	  - all cuttingplans created by the user
 	  - Name, Description, Customer and the date uploaded

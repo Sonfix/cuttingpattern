@@ -107,10 +107,6 @@ function show_header_information() {
             }
         }
     }) 
-
-
-
-
 }
 
 /**
@@ -401,7 +397,6 @@ function loadCustomerGroups() {
  * @param {Event} ev event object
  */
 function dropHandler(ev) {
-    console.log('File(s) dropped');
   
     // Prevent default behavior (Prevent file from being opened)
     ev.preventDefault();
@@ -417,8 +412,6 @@ function dropHandler(ev) {
           file_input.files = ev.dataTransfer.files;
           document.querySelector('#file_name').value = file.name
           show_app_cp()
-
-          console.log('... file[' + i + '].name = ' + file.name);
         }
       }
     } else {
@@ -429,7 +422,6 @@ function dropHandler(ev) {
           document.querySelector('#file_name').value = file.name
           show_app_cp()
 
-        console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
       }
     }
   }
