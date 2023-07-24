@@ -168,7 +168,8 @@ class Api():
         
         return JsonResponse({
             "result" : res,
-            "code" : machine_code
+            "code" : machine_code,
+            "name": cp.file_name
         }, status=200)
 
     def get_header_information(self, request):

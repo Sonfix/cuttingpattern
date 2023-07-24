@@ -140,6 +140,14 @@ function DrawSheet(sheet, parent, r_point) {
 		Trav.addEventListener("click", function() {
 			getSheetInfo(this, sheet);
 		})
+		Trav.addEventListener("contextmenu", function(e){
+			e.preventDefault()
+			let source = e.target || e.srcElement;
+			if (source.nodeName != "DIV"){
+				source = source.parentElement
+			}
+			console.log(sheet)
+		})
 	}
 
 	if (!sheet.RackCode && !sheet.Childs.length) {
@@ -194,6 +202,12 @@ function InitCuttingPlan(direction, json, parent) {
 	//for future feature - TODO: add new context menue to add cuts
 	CP.addEventListener("contextmenu", function(e) {
 		e.preventDefault();
+
+		let source = e.target || e.srcElement;
+		if (source.nodeName != "DIV"){
+			source = source.parentElement
+		}
+
 	})
     
     var json_buff = JSON.parse(json)

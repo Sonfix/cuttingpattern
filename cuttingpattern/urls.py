@@ -9,5 +9,5 @@ urlpatterns = [
     path("logout", views.logout_view, name="logout"),
     path("register", views.register, name="register"),
     path("cuttingpattern/<int:id>", views.show_cuttingpatttern, name="cuttingpattern"),
-    path("explore", views.explore, name="explore")
+    path("explore", views.explore, name="explore"),
 ]

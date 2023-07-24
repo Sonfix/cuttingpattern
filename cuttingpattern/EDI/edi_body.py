@@ -1,9 +1,10 @@
 import xml.etree.ElementTree as ET
+from cuttingpattern.EDI.edi_header import EdiHeader
 from .edi_defines import EdiTraverseInfo, EdiVersion, EdiCutTypes, EdiCut, ModelInformation
 
 import json
 
-def cutCharToEnum(c):
+def cutCharToEnum(c: str):
     '''
         returns EdiCutTypes Type matching the given cut
     '''
@@ -69,7 +70,7 @@ class Traverse():
         return ret
 
 class TraverseNode(Traverse):
-    def __init__(self, width, length):
+    def __init__(self, width: float, length: float):
         '''
          inits the node and set sizes to member
         '''
@@ -149,7 +150,8 @@ class TraverseLeaf(Traverse):
          appends the leaf to mathching child according the path
         '''
 
-        if leaf.Path[self.CutType] == self.CutIndex and EdiCut(cutCharToEnum(self.Cut.getNextCutType())) == leaf.Cut and not leaf.Path[leaf.Cut.getNextCutType()]: #if we are on the same level just append
+        if ((leaf.Path[self.CutType] == self.CutIndex) 
+        and (EdiCut(cutCharToEnum(self.Cut.getNextCutType())) == leaf.Cut and not leaf.Path[leaf.Cut.getNextCutType()])): #if we are on the same level just append
             return super().appendChildByPath(leaf)
         else:
             res = False
@@ -236,7 +238,7 @@ class EdiBody():
                 
             
     
-    def parseCuttingCodeFromEdiFile(self, ver, file, h):
+    def parseCuttingCodeFromEdiFile(self, ver: EdiVersion, file: str, h: EdiHeader):
         '''
             this function parses the cutting code from the edi like a nondeterministic finite automaton (NFA)
         '''
@@ -251,8 +253,8 @@ class EdiBody():
         self.CuttingCode = code
         self.Root = Stockplate(h.Width, h.Height)
 
-        i = 0
-        while i < len(self.CuttingCode):
+        # i = 0
+        for i, c in enumerate(self.CuttingCode):
             c = self.CuttingCode[i]
             #call matching function according to found token
             if c in self.Parser:
@@ -276,13 +278,13 @@ class EdiBody():
     def exportToJson(self):
         return self.Root.toJSON()
     
-    def peek(self, index):
+    def peek(self, index: int):
         '''
          peeks to the next char on buffer with out manipulating the reading position
         '''
         return self.CuttingCode[index:index+1]
 
-    def addCut(self, cutType, index):
+    def addCut(self, cutType: str, index: int):
         #get next space
         cutSizeEnd, size = self.getEndOf(index + 1)
 
@@ -298,7 +300,7 @@ class EdiBody():
         self.last_leaf = leaf.closeCut()
         return cutSizeEnd
     
-    def addModel(self, model, index):
+    def addModel(self, model: str, index: int) -> int:
         modelIdEnd, modelId = self.getEndOf(index + 1)
         #take a peak to next char
         next_char = self.peek(modelIdEnd + 1)
@@ -315,7 +317,7 @@ class EdiBody():
         
         return modelIdEnd
 
-    def addTraverseInfoId(self, trav, index):
+    def addTraverseInfoId(self, trav: str, index: int) -> int:
         travEnd, travId = self.getEndOf(index + 1)
         travId = travId.strip()
         #take a peak to next char
@@ -342,19 +344,19 @@ class EdiBody():
 
         return travEnd
     
-    def addRackInfomation(self, rack, index):
+    def addRackInfomation(self, rack: str, index: int) -> int:
         rackEnd, rack = self.getEndOf(index + 1)
 
         self.last_leaf.setRackCode(rack)
 
         return rackEnd
         
-    def getEndOf(self, index, find={" ", "\n"}):
+    def getEndOf(self, index: int, find={" ", "\n"}) -> int:
         EndPos = next(i for i,c in enumerate(self.CuttingCode[index:]) if c in find)
         value = self.CuttingCode[index : (index + EndPos)]
         return index + EndPos, value.strip()
 
-    def collectTraverseInformation(self, id, start, end) -> EdiTraverseInfo:
+    def collectTraverseInformation(self, id: int, start: int, end: int) -> EdiTraverseInfo:
         '''
          collects all Information Tags which are starting with I
         '''
@@ -376,7 +378,7 @@ class EdiBody():
             i = InfoNameEnd + 1
         return Info
 
-    def collectModelInfomation(self, start, end) -> ModelInformation:
+    def collectModelInfomation(self, start: int, end: int) -> ModelInformation:
         '''
          collects the model information from given F Section
         '''

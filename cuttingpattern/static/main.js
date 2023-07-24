@@ -20,7 +20,7 @@ document.querySelector('#hide-customer-group')?.addEventListener("click", hide_a
 document.querySelector('#show_cuttingcode')?.addEventListener("click", getMachineCode)
 document.querySelector('#show_cuttingdisplay')?.addEventListener("click", show_breakpic)
 document.querySelector('#show-header')?.addEventListener("click", show_header_information)
-
+document.querySelector('#download-edi')?.addEventListener("click", down_load_edi_file)
 
 /**
  * gets the plain machine code for the cutting plan and switches the view
@@ -107,6 +107,39 @@ function show_header_information() {
             }
         }
     }) 
+}
+
+/**
+ * sends a request to api, gets the machine code and saves it to client
+ */
+function down_load_edi_file(){
+    let id = document.querySelector('#pattern-id').innerHTML;
+    fetch('/api/get_machine_code', {
+        method : 'POST',
+        body: JSON.stringify({
+            id: id
+        })
+    })
+    .then(response => response.json())
+    .then(resp => {
+        if (resp.result) {
+            var file = new Blob([resp.code], {type: "text/plain"});
+            if (window.navigator.msSaveOrOpenBlob) // IE10+
+            window.navigator.msSaveOrOpenBlob(file, filename);
+            else { // Others
+                var a = document.createElement("a"),
+                        url = URL.createObjectURL(file);
+                a.href = url;
+                a.download = resp.name;
+                document.body.appendChild(a);
+                a.click();
+                setTimeout(function() {
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);  
+                }, 0); 
+            }
+        }
+    })
 }
 
 /**

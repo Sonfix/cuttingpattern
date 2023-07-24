@@ -26,6 +26,11 @@
                   <a>{{cp.description}}</a>
                   <a>{{cp.customer}}</a>
                   <div class="flex-row-reverse" style="width: 100%;">
+                    {% if cp.user == user%}
+                    <div class="flex">
+                     <img id="delete-ico" style="padding: 0 6px 0 6px;" src="{% static 'delete-button.svg' %}" alt="delete">
+                    </div>
+                  {% endif %}
                     <div class="flex">
                       <a>{{cp.created}}</a>
                     </div>            
