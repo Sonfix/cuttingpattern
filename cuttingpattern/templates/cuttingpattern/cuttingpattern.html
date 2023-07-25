@@ -5,6 +5,7 @@
     <script>        
         document.addEventListener("DOMContentLoaded", function() {
             getCuttingPattern({{pattern.id}});
+            document.title += " - {{pattern.description}}"
         });
     </script>
     <div id="pattern-id" hidden>{{pattern.id}}</div>
