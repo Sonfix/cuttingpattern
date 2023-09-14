@@ -31,7 +31,7 @@ The web application stores the cuttingplan information in two different variatio
 
 ### Getting started
 
-1. In your terminal, cd into the mail directory.
+1. In your terminal, cd into the directory.
 2. Run python manage.py makemigrations to make migrations for the cuttingpattern app.
 3. Run python manage.py migrate to apply migrations to your database.
 4. Finally start the server by running python manage.py runserver

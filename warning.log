@@ -1,0 +1,4 @@
+WARNING 2023-07-25 10:36:09,759 views 15416 19412 User: NiklasTewes send API Request: get_cutting_pattern
+WARNING 2023-07-25 10:36:11,156 views 15416 19412 User: NiklasTewes send API Request: get_cutting_pattern
+WARNING 2023-07-31 12:42:28,106 log 20804 20380 Not Found: /cuttingpattern/cuttingpattern/37
+WARNING 2023-07-31 12:42:28,338 log 20804 20380 Not Found: /favicon.ico

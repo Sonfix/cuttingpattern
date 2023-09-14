@@ -9,6 +9,11 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Customer, User, CuttingPattern
 from .api import Api
 
+# import the logging library
+import logging
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
 def index(request):
     if request.user.is_authenticated:
         usr= User.objects.get(pk=request.user.id)
@@ -23,6 +28,7 @@ def ApiCommand(request, func_name):
     '''
         Returns the given command result in json format
     '''
+    logger.info(f'User: {request.user} send API Request: {func_name}')
     return Api().resolve_command(func_name, request)
 
 
@@ -36,6 +42,7 @@ def login_view(request):
 
         # Check if authentication successful
         if user is not None:
+            logger.info(f'User: {user} has logged in!')
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
