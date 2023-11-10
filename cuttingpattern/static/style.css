@@ -371,6 +371,10 @@ nav ul,nav li {
     height: 100%;
 }
 
+.main-menu-color {
+    background-color: var(--sidebar-color);
+}
+
 @font-face {
   font-family: 'Titillium Web';
   font-style: normal;

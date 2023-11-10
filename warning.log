@@ -2,3 +2,111 @@ WARNING 2023-07-25 10:36:09,759 views 15416 19412 User: NiklasTewes send API Req
 WARNING 2023-07-25 10:36:11,156 views 15416 19412 User: NiklasTewes send API Request: get_cutting_pattern
 WARNING 2023-07-31 12:42:28,106 log 20804 20380 Not Found: /cuttingpattern/cuttingpattern/37
 WARNING 2023-07-31 12:42:28,338 log 20804 20380 Not Found: /favicon.ico
+ERROR 2023-11-03 11:57:36,214 log 21956 2372 Internal Server Error: /api/test_dll
+Traceback (most recent call last):
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\views.py", line 32, in ApiCommand
+    return Api().resolve_command(func_name, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\api.py", line 32, in resolve_command
+    return self.command_list[command](request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\api.py", line 200, in test_dll
+    hopti = HOpti_Handler()
+    ^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\EDI\Hopti_handler.py", line 5, in __init__
+    self.HOpti_DLL = ctypes.WinDLL("Hopti.dll")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'Hopti.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+ERROR 2023-11-03 11:59:26,502 log 12776 1096 Internal Server Error: /api/test_dll
+Traceback (most recent call last):
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\views.py", line 32, in ApiCommand
+    return Api().resolve_command(func_name, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\api.py", line 33, in resolve_command
+    return self.command_list[command](request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\api.py", line 206, in test_dll
+    hopti = HOpti_Handler()
+    ^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\EDI\Hopti_handler.py", line 5, in __init__
+    self.HOpti_DLL = ctypes.WinDLL("Hopti.dll")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'Hopti.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+ERROR 2023-11-03 12:01:05,489 log 7000 2516 Internal Server Error: /api/test_dll
+Traceback (most recent call last):
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\views.py", line 32, in ApiCommand
+    return Api().resolve_command(func_name, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\api.py", line 33, in resolve_command
+    return self.command_list[command](request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\api.py", line 206, in test_dll
+    hopti = HOpti_Handler()
+    ^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\EDI\Hopti_handler.py", line 5, in __init__
+    self.HOpti_DLL = ctypes.WinDLL("C:\HOpti\BIN\\Hopti.dll")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 193] %1 ist keine zulässige Win32-Anwendung
+ERROR 2023-11-03 12:02:22,598 log 8284 21744 Internal Server Error: /api/test_dll
+Traceback (most recent call last):
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\views.py", line 32, in ApiCommand
+    return Api().resolve_command(func_name, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\api.py", line 33, in resolve_command
+    return self.command_list[command](request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\api.py", line 202, in test_dll
+    hopti = HOpti_Handler()
+    ^^^^^^^^^^^^^^^
+  File "D:\_dev\EDx\CS50\Web Programming\Final Project\cuttingpattern\EDI\Hopti_handler.py", line 5, in __init__
+    self.HOpti_DLL = ctypes.WinDLL("C:\HOpti\BIN\\Hopti.dll")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 193] %1 ist keine zulässige Win32-Anwendung

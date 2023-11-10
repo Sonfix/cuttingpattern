@@ -1,8 +1,10 @@
 import json
 from django.http import JsonResponse
+import os
 
 from .models import Customer, CustomerGroup, CuttingPattern
 from .EDI.edi import EdiFile
+from .EDI.Hopti_handler import *
 
 
 TEST_DATA = "D:\\_VMShare\\Dev_CPP\\00_Kunden\\FR, Auvergne\\20210902\\37.EDI5"
@@ -17,7 +19,8 @@ class Api():
             "delete_pattern" : self.delete_pattern,
             "get_customer_groups" : self.get_customer_groups,
             "get_machine_code" : self.get_machine_code,
-            "get_header_information" : self.get_header_information
+            "get_header_information" : self.get_header_information,
+            "test_dll" : self.test_dll,
         }
 
     def resolve_command(self, command, request):
@@ -188,3 +191,12 @@ class Api():
             "result" : res,
             "data" : json_data
         }, status=200)
+
+
+    def test_dll(seld, request):
+        # get the current working directory
+        current_working_directory = os.getcwd()
+
+        # print output to the console
+        print(current_working_directory)
+        hopti = HOpti_Handler()        
